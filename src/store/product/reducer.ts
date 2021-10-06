@@ -21,11 +21,9 @@ export interface IProductAction {
 
 export function productReducer(state = INITIAL_STATE, action: IProductAction) {
   switch (action.type) {
-    case "ADD":
-      {
-        return [...state, action.payload];
-      }
-      break;
+    case "ADD": {
+      return [...state, action.payload];
+    }
 
     default:
       return state;
